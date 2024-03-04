@@ -1,7 +1,12 @@
 import Link from 'next/link';
+import { motion } from 'framer-motion';
 function Logo() {
   return (
-    <div className='md:hidden lg:flex'>
+    <motion.div
+      className='md:hidden lg:flex'
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+    >
       <Link
         href='/'
         className='text-sm bg-purple rounded-md p-1 font-semibold flex items-center justify-center'
@@ -11,7 +16,7 @@ function Logo() {
           .dev
         </span>
       </Link>
-    </div>
+    </motion.div>
   );
 }
 

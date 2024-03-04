@@ -1,19 +1,23 @@
 'use client';
 import React, { useTransition, useState } from 'react';
 import Image from 'next/image';
-import TabButton from './Tab/TabButton';
-import TabData from './Tab/TabData';
-import Hero from '../public/assets/hero.svg';
+import Jason from '../public/Jason.jpg';
 
 const AboutSection = () => {
   return (
     <section
-      className='px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40'
+      className='px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40 scroll-mt-20'
       id='about'
     >
       <div className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-28 '>
         <div className='place-self-center'>
-          <Image src={Hero} alt='hero-image' width={480} height={359} />
+          <Image
+            src={Jason}
+            alt='profile-image'
+            className='h-auto max-w-lg rounded-full'
+            width={350}
+            height={350}
+          />
         </div>
         <div className='place-self-center text-center md:text-left h-full text-secondary'>
           <h2 className='text-2xl md:text-4xl font-extrabold mb-4'>About Me</h2>
