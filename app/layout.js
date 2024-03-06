@@ -1,7 +1,8 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
 import Navbar from '@/components/NavBar/Navbar';
-import FooterSection from '@/components/FooterSection';
+import FooterSection from '@/components/section/FooterSection';
+import { ActiveSectionContextProvider } from '@/context/active-section-context';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -15,13 +16,15 @@ export default function RootLayout({ children }) {
     <html className='scroll-smooth' lang='en'>
       <body className={inter.className}>
         <div className='bg-primary'>
-          <div className='h-24 sticky top-0'>
-            <Navbar />
-          </div>
-          <div className='h-[calc(100vh-6rem]'>
-            {children}
-            <FooterSection />
-          </div>
+          <ActiveSectionContextProvider>
+            <div className='h-24 sticky top-0'>
+              <Navbar />
+            </div>
+            <div className='h-[calc(100vh-6rem]'>
+              {children}
+              <FooterSection />
+            </div>
+          </ActiveSectionContextProvider>
         </div>
       </body>
     </html>

@@ -1,11 +1,15 @@
 'use client';
-import React, { useTransition, useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
-import Jason from '../public/Jason.jpg';
+import Jason from '@/public/Jason.jpg';
+import useSectionInView from '@/lib/hooks/useSectionInView';
 
 const AboutSection = () => {
+  const { ref } = useSectionInView('About');
+
   return (
     <section
+      ref={ref}
       className='px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40 scroll-mt-20'
       id='about'
     >

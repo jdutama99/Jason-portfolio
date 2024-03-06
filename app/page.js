@@ -1,8 +1,9 @@
-import AboutSection from '@/components/AboutSection';
-import ContactSection from '@/components/Contact/ContactSection';
-import ExperienceSection from '@/components/ExperienceSection';
-import { HeroSection } from '@/components/HeroSection';
-import TechSection from '@/components/TechSection';
+import AboutSection from '@/components/section/AboutSection';
+import ContactSection from '@/components/section/Contact/ContactSection';
+import ExperienceSection from '@/components/section/ExperienceSection';
+import { HeroSection } from '@/components/section/HeroSection';
+import SkillSection from '@/components/section/SkillSection';
+import TechSection from '@/components/section/TechSection';
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <HeroSection />
         <TechSection />
         <AboutSection />
+        <SkillSection />
         <ExperienceSection />
         <ContactSection />
       </container>

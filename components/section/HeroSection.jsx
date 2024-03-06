@@ -1,16 +1,19 @@
 'use client';
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
-import Button from './common/Button';
-import Hero from '../public/assets/hero.svg';
+import Button from '../common/Button';
+import Hero from '@/public/assets/hero.svg';
 import { DocumentArrowDownIcon } from '@heroicons/react/24/outline';
 import { TypeAnimation } from 'react-type-animation';
+import useSectionInView from '@/lib/hooks/useSectionInView';
 
 import Link from 'next/link';
 
 export const HeroSection = () => {
+  const { ref } = useSectionInView('Home');
+
   return (
-    <section id='home'>
+    <section ref={ref} id='home'>
       <div className='lg:h-max bg-hero bg-no-repeat bg-cover bg-center bg-fixed grid grid-cols-1 md:grid-cols-12  px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 py-14 lg:py-28 gap-6'>
         <div className='md:col-span-7 text-center md:text-left place-self-center'>
           <h1 className='mb-4 text-4xl  md:text-5xl lg:text-6xl xl:text-7xl leading-10'>
@@ -50,9 +53,9 @@ export const HeroSection = () => {
                 target='_blank'
                 rel='noopener noreferrer'
                 locale={false}
-                className='flex flex-row'
+                className='flex flex-row gap-3'
               >
-                <span className='mr-2'>Download Resume</span>
+                <span>Download Resume</span>
                 <DocumentArrowDownIcon className='h-6 w-6' />
               </Link>
             </Button>

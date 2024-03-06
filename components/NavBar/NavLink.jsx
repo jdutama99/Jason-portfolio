@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import clsx from 'clsx';
 import { motion } from 'framer-motion';
-const NavLink = ({ active, link, setActive }) => {
+const NavLink = ({ active, link, setActive, setTimeOfLastClick }) => {
   const isActive = active === link.title;
   return (
     <motion.div
@@ -18,7 +18,9 @@ const NavLink = ({ active, link, setActive }) => {
           }
         )}
         href={link.url}
-        onClick={() => setActive(link.title)}
+        onClick={() => {
+          setActive(link.title), setTimeOfLastClick(Date.now());
+        }}
       >
         {link.title}
         {isActive && (

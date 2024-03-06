@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Bars3Icon } from '@heroicons/react/24/outline';
 import { XMarkIcon } from '@heroicons/react/24/outline';
-import navLinks from './links';
+import navLinks from '../../lib/links';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 export default function NavMenu() {

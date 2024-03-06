@@ -1,16 +1,20 @@
-import React from 'react';
+'use client';
+import React, { useEffect } from 'react';
 import ContactForm from './ContactForm';
-import Button from '../common/Button';
+import Button from '../../common/Button';
 import Link from 'next/link';
-import LinkedIn from '../../public/linkedin.svg';
+import LinkedIn from '@/public/linkedin.svg';
 import Image from 'next/image';
+import useSectionInView from '@/lib/hooks/useSectionInView';
 import { EnvelopeIcon } from '@heroicons/react/24/outline';
 
 const ContactSection = () => {
+  const { ref } = useSectionInView('Contact');
   return (
     <section
       id='contact'
-      className='m-6 md:m-12 p-6 md:p-24 flex justify-center'
+      ref={ref}
+      className='bg-blueBg bg-no-repeat bg-cover bg-center bg-fixed p-6 md:p-24 flex justify-center scroll-mt-20'
     >
       <div className='text-center text-secondary max-w-2xl'>
         <h1 className='text-4xl'>Contact</h1>
@@ -26,11 +30,9 @@ const ContactSection = () => {
           </p>
           <div className='grid justify-items-center grid-cols-1 lg:grid-cols-2 mt-10'>
             <div className='col-span-1'>
-              <Button full={true}>
+              <Button>
                 <EnvelopeIcon className='h-6 w-6' />
-                <Link href='' className='ml-2'>
-                  jasonutama0206@gmail.com
-                </Link>
+                jasonutama0206@gmail.com
               </Button>
             </div>
             <div className='col-span-1'>

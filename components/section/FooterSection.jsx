@@ -2,7 +2,7 @@ import Link from 'next/link';
 
 function FooterSection() {
   return (
-    <footer className='bg-darkBlue text-secondary'>
+    <footer className='bg-primary text-secondary'>
       <div className='mx-auto w-full p-4 py-6 lg:py-8'>
         <div className='md:flex md:justify-between'>
           <div className='mb-6 md:mb-0'>
@@ -104,10 +104,10 @@ function FooterSection() {
             </a>
             <a href='#' className=' hover:text-gray-900ite ms-5'>
               <svg
-                className='w-4 h-4 text-purple'
+                className='w-4 h-4'
                 aria-hidden='true'
                 xmlns='http://www.w3.org/2000/svg'
-                fill='purple'
+                fill='currentColor'
                 viewBox='0 0 20 20'
               >
                 <path
