@@ -9,14 +9,14 @@ const AboutSection = () => {
 
   return (
     <section ref={ref} className='scroll-mt-20' id='about'>
-      <div className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-28 px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40 '>
+      <div className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-20 lg:gap-28 px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40 '>
         <div className='place-self-center'>
           <Image
             src={Jason}
             alt='profile-image'
             className='h-auto max-w-lg rounded-lg'
-            width={350}
-            height={350}
+            width={300}
+            height={300}
           />
         </div>
         <div className='place-self-center text-center md:text-left h-full text-secondary'>
