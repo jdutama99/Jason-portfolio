@@ -1,19 +1,18 @@
 'use client';
-import React, { useEffect } from 'react';
 import ContactForm from './ContactForm';
-import Button from '../../common/Button';
-import Link from 'next/link';
+import Discord from '@/public/Discord.svg';
 import LinkedIn from '@/public/linkedin.svg';
 import Image from 'next/image';
 import useSectionInView from '@/lib/hooks/useSectionInView';
-import { EnvelopeIcon } from '@heroicons/react/24/outline';
+
 import { motion } from 'framer-motion';
+import ButtonLink from '@/components/common/ButtonLink';
 
 const ContactSection = () => {
   const { ref } = useSectionInView('Contact');
   return (
     <section id='contact' ref={ref} className=' scroll-mt-20'>
-      <div className='bg-blueBg bg-no-repeat bg-cover bg-center bg-fixed p-6 md:p-24 flex justify-center'>
+      <div className='bg-blueBg bg-no-repeat bg-cover bg-center bg-fixed p-6 md:p-24 flex justify-center '>
         <motion.div
           className='text-center text-secondary max-w-2xl'
           initial={{
@@ -37,25 +36,18 @@ const ContactSection = () => {
               or email me. I&apos;m eager to connect and discuss potential
               opportunities.
             </p>
-            <div className='grid grid-cols-1 md:grid-cols-2 mt-10 md: gap-6'>
+            <div className='grid grid-cols-1 md:grid-cols-2 mt-10 gap-4 md:gap-6 mb-10'>
               <div className='col-span-1'>
-                <Button>
-                  <a
-                    href='mailto:jasonutama0206@gmail.com'
-                    className='flex flex-row gap-3'
-                  >
-                    <EnvelopeIcon className='h-6 w-6' />
-                    Mail me
-                  </a>
-                </Button>
+                <ButtonLink link='https://discord.com/invite/DkSpGSeD'>
+                  <Image src={Discord} width={25} alt='LinkedIn' />
+                  Discord
+                </ButtonLink>
               </div>
               <div className='col-span-1'>
-                <Button>
+                <ButtonLink link='https://www.linkedin.com/in/jason-utama/'>
                   <Image src={LinkedIn} width={25} alt='LinkedIn' />
-                  <Link href='' className='ml-2'>
-                    LinkedIn
-                  </Link>
-                </Button>
+                  LinkedIn
+                </ButtonLink>
               </div>
             </div>
           </div>

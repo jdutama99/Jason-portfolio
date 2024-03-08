@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 function Logo() {
   return (
     <motion.div
-      className='md:hidden lg:flex'
+      className='flex'
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
     >

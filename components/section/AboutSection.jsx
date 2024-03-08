@@ -22,15 +22,18 @@ const AboutSection = () => {
         <div className='place-self-center text-center md:text-left h-full text-secondary'>
           <h2 className='text-2xl md:text-4xl font-extrabold mb-4'>About Me</h2>
           <p className='text-base lg:text-lg text-pretty'>
-            Welcome to my digital space! I&apos;m Jason Utama, a passionate UI
-            Developer based in Atlanta, GA. With a proven track record of
-            accelerating project timelines and enhancing user experiences, I
-            thrive on crafting digital solutions that seamlessly blend
-            innovation and functionality. Specializing in ReactJS and NextJS, I
-            bring a unique blend of technical expertise and creative flair to
-            every project. Explore my portfolio to discover the stories behind
-            the code and the impact of my journey in the realm of UI
-            development.
+            Welcome to my digital space! I&apos;m Jason Utama, a passionate
+            Frontend Engineer based in Atlanta, GA. Back when I was in middle
+            school, my teacher assigned me a project to create my own website
+            using HTML and CSS. This lead me to tumble head first into the
+            rabbit hole of coding and web development. Fast-forward to today,
+            and I&apos;ve had the privilege of building software for Fortune 500
+            companies.
+            <br />
+            <br />
+            When I&apos;m not at the computer, I&apos;m usually will be enjoying
+            a video game session with my friends, cooking, hanging out with my
+            fiance and my dog, or working out.
           </p>
         </div>
       </div>
