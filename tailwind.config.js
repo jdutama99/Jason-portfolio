@@ -13,6 +13,8 @@ module.exports = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
         hero: "url('../public/assets/heroBg.png')",
         blueBg: "url('../public/assets/blueBg.png')",
+        heroMobile: "url('../public/assets/heroMobile.png')",
+        blueBgMobile: "url('../public/assets/blueBgMobile.png')",
       },
       colors: {
         primary: '#171818',

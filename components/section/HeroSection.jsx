@@ -14,11 +14,7 @@ export const HeroSection = () => {
 
   return (
     <section ref={ref} id='home' className='scroll-mt-50'>
-      <div
-        className='lg:h-max
-      bg-hero bg-no-repeat bg-cover bg-center bg-fixed
-      grid  grid-cols-1 md:grid-cols-12  px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 py-14 lg:py-28 gap-6 '
-      >
+      <div className='lg:h-max bg-heroMobile md:bg-hero bg-no-repeat bg-cover bg-center bg-fixed grid  grid-cols-1 md:grid-cols-12  px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 py-14 lg:py-28 gap-6 '>
         <div className='md:col-span-7 text-center md:text-left place-self-center'>
           <h1 className='mb-4 text-4xl  md:text-5xl lg:text-6xl xl:text-7xl leading-10'>
             <span className='text-secondary'>
