@@ -42,7 +42,7 @@ export const HeroSection = () => {
             experiences through successful migration projects and strategic UI
             redesigns.
           </p>
-          <div className='flex flex-col lg:flex-row mt-10 mx-10 px-10 md:px-0 md:mx-0 text-secondary'>
+          <div className='flex flex-col justify-center lg:flex-row mt-10 mx-10 px-10 md:px-0 md:mx-0 text-secondary gap-4'>
             <a href='#contact'>
               <Button>Get in touch</Button>
             </a>
@@ -53,7 +53,7 @@ export const HeroSection = () => {
               rel='noopener noreferrer'
               download
               locale={false}
-              className='flex flex-row gap-3'
+              className='flex flex-row gap-4'
             >
               <Button>
                 <span>Download Resume</span>
