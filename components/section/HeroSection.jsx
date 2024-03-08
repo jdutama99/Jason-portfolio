@@ -46,11 +46,7 @@ export const HeroSection = () => {
             experiences through successful migration projects and strategic UI
             redesigns.
           </p>
-          <div className='flex flex-col justify-center lg:flex-row mt-10 mx-10 px-10 md:px-0 md:mx-0 text-secondary gap-4'>
-            <a href='#contact'>
-              <Button>Get in touch</Button>
-            </a>
-
+          <div className='flex flex-col lg:flex-row mt-10 mx-10 px-10 md:px-0 md:mx-0 text-secondary gap-4'>
             <Link
               href={'/JasonUtamaResume2024.pdf'}
               target='_blank'
@@ -64,6 +60,9 @@ export const HeroSection = () => {
                 <DocumentArrowDownIcon className='h-6 w-6' />
               </Button>
             </Link>
+            <a href='#contact'>
+              <Button>Get in touch</Button>
+            </a>
           </div>
         </div>
         <div className='md:col-span-5 place-self-center  mt-10 lg:mt-0 '>
