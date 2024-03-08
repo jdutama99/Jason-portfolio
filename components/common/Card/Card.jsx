@@ -6,7 +6,13 @@ const Card = ({ image, title, desc }) => {
   return (
     <div className='group max-w-sm bg-white  hover:bg-slate-200 border border-gray-200 rounded-lg shadow'>
       <Link href='#' className='bg-black'>
-        <Image className='rounded-t-lg' src={image} width={250} height={100} />
+        <Image
+          className='rounded-t-lg'
+          src={image}
+          width={250}
+          height={100}
+          alt=''
+        />
       </Link>
       <div className='px-2'>
         <Link href='#'>

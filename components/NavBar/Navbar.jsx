@@ -1,5 +1,5 @@
 'use client';
-import navLinks from '../../lib/links';
+import navLinks from '../../lib/data/links';
 import Logo from './Logo';
 import NavLink from './NavLink';
 import NavMenu from './NavMenu';

@@ -52,6 +52,7 @@ export const HeroSection = () => {
                 href={'/Resume2024.pdf'}
                 target='_blank'
                 rel='noopener noreferrer'
+                download
                 locale={false}
                 className='flex flex-row gap-3'
               >

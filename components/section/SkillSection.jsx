@@ -1,6 +1,6 @@
 'use client';
 import SectionHeading from '../common/SectionHeading';
-import Skills from '../../lib/skills';
+import Skills from '../../lib/data/skills';
 import { motion } from 'framer-motion';
 
 export default function SkillSection() {

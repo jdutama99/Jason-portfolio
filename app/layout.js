@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/NavBar/Navbar';
 import FooterSection from '@/components/section/FooterSection';
 import { ActiveSectionContextProvider } from '@/context/active-section-context';
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
               {children}
               <FooterSection />
             </div>
+            <Toaster position='bottom-right' />
           </ActiveSectionContextProvider>
         </div>
       </body>
