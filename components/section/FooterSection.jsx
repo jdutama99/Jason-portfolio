@@ -51,10 +51,7 @@ function FooterSection() {
         </div>
         <hr className='my-6 border-gray-200 sm:mx-auto lg:my-8' />
         <div className='flex flex-col items-center justify-between'>
-          <span className='text-sm  text-center'>
-            UX/UI Design Created by Christiana Smith | UI Development Done by
-            Jason Utama
-          </span>
+          <span className='text-sm  text-center'>&copy; 2024 Jason Utama</span>
         </div>
       </div>
     </footer>

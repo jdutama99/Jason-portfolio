@@ -33,7 +33,7 @@ const AboutSection = () => {
             <br />
             When I&apos;m not at the computer, I&apos;m usually will be enjoying
             a video game session with my friends, cooking, hanging out with my
-            fiance and my dog, or working out.
+            fiancée and my dog, or working out.
           </p>
         </div>
       </div>
