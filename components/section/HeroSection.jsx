@@ -43,23 +43,23 @@ export const HeroSection = () => {
             redesigns.
           </p>
           <div className='flex flex-col lg:flex-row mt-10 mx-10 px-10 md:px-0 md:mx-0 text-secondary'>
-            <Button>
-              <Link href='#contact'>Get in touch</Link>
-            </Button>
+            <a href='#contact'>
+              <Button>Get in touch</Button>
+            </a>
 
-            <Button>
-              <Link
-                href={'/JasonUtamaResume2024.pdf'}
-                target='_blank'
-                rel='noopener noreferrer'
-                download
-                locale={false}
-                className='flex flex-row gap-3'
-              >
+            <Link
+              href={'/JasonUtamaResume2024.pdf'}
+              target='_blank'
+              rel='noopener noreferrer'
+              download
+              locale={false}
+              className='flex flex-row gap-3'
+            >
+              <Button>
                 <span>Download Resume</span>
                 <DocumentArrowDownIcon className='h-6 w-6' />
-              </Link>
-            </Button>
+              </Button>
+            </Link>
           </div>
         </div>
         <div className='md:col-span-5 place-self-center  mt-10 lg:mt-0 '>

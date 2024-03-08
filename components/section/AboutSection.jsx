@@ -14,7 +14,7 @@ const AboutSection = () => {
           <Image
             src={Jason}
             alt='profile-image'
-            className='h-auto max-w-lg rounded-full'
+            className='h-auto max-w-lg rounded-lg filter grayscale '
             width={350}
             height={350}
           />
