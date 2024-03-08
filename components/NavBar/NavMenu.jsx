@@ -61,6 +61,7 @@ export default function NavMenu() {
               variants={itemVariants}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
+              key={link.title}
             >
               <Link href={link.url} onClick={() => setOpen((prev) => !prev)}>
                 {link.title}

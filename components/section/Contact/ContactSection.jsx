@@ -27,14 +27,14 @@ const ContactSection = () => {
         >
           <h1 className='text-4xl'>Contact</h1>
           <h2 className='text-base mb-10'>
-            Let's connect and explore the possibilities together!
+            Let&apos;s connect and explore the possibilities together!
           </h2>
           <ContactForm />
           <div className='mt-10'>
             <h1 className='text-2xl'>Reach me directly</h1>
             <p className='text-base mb-6 text-balance'>
               For direct inquiries and collaborations, please feel free to call
-              or email me. I'm eager to connect and discuss potential
+              or email me. I&apos;m eager to connect and discuss potential
               opportunities.
             </p>
             <div className='grid grid-cols-1 md:grid-cols-2 mt-10 md: gap-6'>

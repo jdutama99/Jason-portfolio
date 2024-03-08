@@ -22,7 +22,7 @@ const AboutSection = () => {
         <div className='place-self-center text-center md:text-left h-full text-secondary'>
           <h2 className='text-2xl md:text-4xl font-extrabold mb-4'>About Me</h2>
           <p className='text-base lg:text-lg text-pretty'>
-            Welcome to my digital space! I'm Jason Utama, a passionate UI
+            Welcome to my digital space! I&apos;m Jason Utama, a passionate UI
             Developer based in Atlanta, GA. With a proven track record of
             accelerating project timelines and enhancing user experiences, I
             thrive on crafting digital solutions that seamlessly blend
