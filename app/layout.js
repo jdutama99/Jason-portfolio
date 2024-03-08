@@ -18,10 +18,10 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className='bg-primary'>
           <ActiveSectionContextProvider>
-            <div className='h-24 sticky top-0'>
+            <div className='h-20 sticky top-0'>
               <Navbar />
             </div>
-            <div className='h-[calc(100vh-6rem]'>
+            <div className='h-[calc(100vh-5rem]'>
               {children}
               <FooterSection />
             </div>

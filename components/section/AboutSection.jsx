@@ -8,12 +8,8 @@ const AboutSection = () => {
   const { ref } = useSectionInView('About');
 
   return (
-    <section
-      ref={ref}
-      className='px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40 scroll-mt-20'
-      id='about'
-    >
-      <div className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-28 '>
+    <section ref={ref} className='scroll-mt-20' id='about'>
+      <div className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-28 px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40 '>
         <div className='place-self-center'>
           <Image
             src={Jason}
