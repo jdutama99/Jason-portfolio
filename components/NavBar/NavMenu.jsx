@@ -54,7 +54,7 @@ export default function NavMenu() {
           variants={listVariants}
           initial='closed'
           animate='open'
-          className='absolute top-0 left-0 w-screen h-screen bg-purple text-secondary flex flex-col items-center justify-center gap-8 text-2xl'
+          className='absolute top-0 left-0 w-screen h-screen bg-darkBlue text-secondary flex flex-col items-center justify-center gap-8 text-2xl z-100'
         >
           {navLinks.map((link) => (
             <motion.li

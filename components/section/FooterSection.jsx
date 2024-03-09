@@ -17,10 +17,14 @@ function FooterSection() {
               </h2>
               <ul className='font-medium'>
                 <li className='mb-4'>
-                  <Link href='#top'>Home</Link>
+                  <a href='#top' className='hover:underline'>
+                    Home
+                  </a>
                 </li>
                 <li>
-                  <Link href='#about'>About</Link>
+                  <a href='#about' className='hover:underline'>
+                    About
+                  </a>
                 </li>
               </ul>
             </div>
@@ -32,7 +36,7 @@ function FooterSection() {
                 <li className='mb-4'>
                   <a
                     href='https://github.com/jdutama99'
-                    className='hover:underline '
+                    className='hover:underline'
                   >
                     Github
                   </a>
