@@ -10,17 +10,21 @@ const AboutSection = () => {
 
   return (
     <section ref={ref} className='scroll-mt-20' id='about'>
-      <div className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-20 lg:gap-28 px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40 '>
-        <motion.div
-          className='place-self-center'
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-        >
+      <motion.div
+        className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-20 lg:gap-28 px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40 '
+        whileInView='animate'
+        initial={{ opacity: 0, scale: 0.5 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{
+          duration: 0.8,
+          delay: 0.5,
+          ease: [0, 0.71, 0.2, 1.01],
+        }}
+        viewport={{
+          once: true,
+        }}
+      >
+        <div className='place-self-center'>
           <Image
             src={Jason}
             alt='profile-image'
@@ -28,17 +32,8 @@ const AboutSection = () => {
             width={300}
             height={300}
           />
-        </motion.div>
-        <motion.div
-          className='place-self-center text-center md:text-left h-full text-secondary'
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{
-            duration: 0.8,
-            delay: 0.5,
-            ease: [0, 0.71, 0.2, 1.01],
-          }}
-        >
+        </div>
+        <div className='place-self-center text-center md:text-left h-full text-secondary'>
           <h2 className='text-2xl md:text-4xl font-extrabold mb-4'>About Me</h2>
           <p className='text-base lg:text-lg text-pretty'>
             Welcome to my digital space! I&apos;m Jason Utama, a passionate
@@ -54,8 +49,8 @@ const AboutSection = () => {
             a video game session with my friends, cooking, hanging out with my
             fiancée and my dog, or working out.
           </p>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 };

@@ -12,7 +12,7 @@ const ContactSection = () => {
   const { ref } = useSectionInView('Contact');
   return (
     <section id='contact' ref={ref} className=' scroll-mt-20'>
-      <div className='bg-blueBg bg-no-repeat bg-cover bg-center bg-fixed p-6 md:p-24 flex justify-center '>
+      <div className='bg-darkBlue p-6 md:p-24 flex justify-center '>
         <motion.div
           className='text-center text-secondary max-w-2xl'
           initial={{
