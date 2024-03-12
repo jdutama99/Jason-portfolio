@@ -10,7 +10,7 @@ const Navbar = () => {
     useActiveSectionContext();
 
   return (
-    <nav className='backdrop-blur-sm bg-primary/30  h-full flex items-center z-50 justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40'>
+    <nav className='backdrop-blur-sm bg-primary/30  h-full flex items-center z-50 justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 z-99'>
       <div className='hidden md:flex gap-5'>
         {navLinks.map((link) => (
           <div key={link.title}>
