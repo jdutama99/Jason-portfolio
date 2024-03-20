@@ -13,7 +13,7 @@ const AboutSection = () => {
       <motion.div
         className='grid grid-cols-1 md:grid-cols-2 items-center md:gap-20 lg:gap-28 px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40 z-[-10'
         initial={{ opacity: 0, y: 100 }}
-        animate={{
+        whileInView={{
           opacity: 1,
           y: 0,
           transition: {
