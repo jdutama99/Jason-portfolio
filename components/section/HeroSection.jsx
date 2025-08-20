@@ -44,7 +44,7 @@ export const HeroSection = () => {
           </p>
           <div className='flex flex-col lg:flex-row mt-10 mx-10 px-10 md:px-0 md:mx-0 text-secondary gap-4'>
             <Link
-              href={'/JasonUtamaResume2024.pdf'}
+              href={'/Utama_Resume_2025.pdf'}
               target='_blank'
               rel='noopener noreferrer'
               download
