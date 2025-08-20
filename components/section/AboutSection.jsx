@@ -47,8 +47,9 @@ const AboutSection = () => {
             <br />
             <br />
             When I&apos;m not at the computer, I&apos;m usually will be enjoying
-            a video game session with my friends, cooking, hanging out with my
-            fiancée and my dog, or working out.
+            a video game session with my friends, the occasional game of soccer,
+            hanging out with my wife and my dog Benny, and collecting pokemon
+            cards.
           </p>
         </div>
       </motion.div>
