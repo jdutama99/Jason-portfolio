@@ -9,10 +9,10 @@ export default function NavMenu() {
 
   const listVariants = {
     closed: {
-      x: '100vw',
+      y: '100vh',
     },
     open: {
-      x: 0,
+      y: 0,
       transition: {
         when: 'beforeChildren',
         staggerChildren: 0.2,
@@ -22,17 +22,17 @@ export default function NavMenu() {
 
   const itemVariants = {
     open: {
-      y: 0,
+      x: 0,
       opacity: 1,
       transition: {
-        y: { stiffness: 1000, velocity: -100 },
+        x: { stiffness: 1000, velocity: -100 },
       },
     },
     closed: {
-      y: 50,
+      x: 50,
       opacity: 0,
       transition: {
-        y: { stiffness: 1000 },
+        x: { stiffness: 1000 },
       },
     },
   };
@@ -54,7 +54,7 @@ export default function NavMenu() {
           variants={listVariants}
           initial='closed'
           animate='open'
-          className='absolute top-0 left-0 w-screen h-screen bg-darkBlue text-secondary flex flex-col items-center justify-center gap-8 text-2xl z-100'
+          className='absolute bottom-0 left-0 w-screen h-20 bg-darkBlue text-secondary flex flex-row items-center justify-center gap-8 text-2xl z-100'
         >
           {navLinks.map((link) => (
             <motion.li

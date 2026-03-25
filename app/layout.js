@@ -18,12 +18,14 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
         <div className='bg-primary'>
           <ActiveSectionContextProvider>
-            <div className='h-20 sticky top-0'>
-              <Navbar />
-            </div>
-            <div className='h-[calc(100vh-5rem]'>
-              {children}
-              <FooterSection />
+            <div className='flex'>
+              <div className='w-64 h-screen sticky top-0'>
+                <Navbar />
+              </div>
+              <div className='flex-1 h-screen overflow-y-auto'>
+                {children}
+                <FooterSection />
+              </div>
             </div>
             <Toaster position='bottom-right' />
           </ActiveSectionContextProvider>

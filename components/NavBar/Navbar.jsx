@@ -10,8 +10,9 @@ const Navbar = () => {
     useActiveSectionContext();
 
   return (
-    <nav className='backdrop-blur-sm bg-primary/30  h-full flex items-center z-50 justify-between px-4 sm:px-8 md:px-12 lg:px-20 xl:px-40 z-99'>
-      <div className='hidden md:flex gap-5'>
+    <nav className='backdrop-blur-sm bg-primary/30 h-full flex flex-col items-center py-8 z-50'>
+      <Logo />
+      <div className='flex flex-col gap-5 mt-8'>
         {navLinks.map((link) => (
           <div key={link.title}>
             <NavLink
@@ -23,8 +24,9 @@ const Navbar = () => {
           </div>
         ))}
       </div>
-      <Logo />
-      <NavMenu />
+      <div className='mt-auto'>
+        <NavMenu />
+      </div>
     </nav>
   );
 };
