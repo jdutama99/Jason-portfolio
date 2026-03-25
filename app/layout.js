@@ -19,12 +19,17 @@ export default function RootLayout({ children }) {
         <div className='bg-primary'>
           <ActiveSectionContextProvider>
             <div className='flex'>
-              <div className='w-2/5 h-screen sticky top-0'>
+              <div className='hidden md:block w-2/5 h-screen sticky top-0'>
                 <Navbar />
               </div>
-              <div className='w-3/5 flex-1 h-screen overflow-y-auto'>
-                {children}
-                <FooterSection />
+              <div className='w-full md:w-3/5'>
+                <div className='md:hidden'>
+                  <Navbar />
+                </div>
+                <div className='flex-1 h-screen overflow-y-auto'>
+                  {children}
+                  <FooterSection />
+                </div>
               </div>
             </div>
             <Toaster position='bottom-right' />

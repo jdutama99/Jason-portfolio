@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main className='flex min-h-screen flex-col'>
       <container className='mx-auto'>
-        <HeroSection />
-        <TechSection />
+        {/* <HeroSection /> */}
         <AboutSection />
+        <TechSection />
         <SkillSection />
         <ExperienceSection />
         <ContactSection />

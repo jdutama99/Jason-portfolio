@@ -5,7 +5,7 @@ import { links } from '@/lib/data/links';
 export const ActiveSectionContext = createContext(null);
 
 export const ActiveSectionContextProvider = ({ children }) => {
-  const [activeSection, setActiveSection] = useState('Home');
+  const [activeSection, setActiveSection] = useState('About');
 
   // to disable observer
   const [timeOfLastClick, setTimeOfLastClick] = useState(0);
@@ -28,7 +28,7 @@ export const useActiveSectionContext = () => {
   const context = useContext(ActiveSectionContext);
   if (context === null) {
     throw new Error(
-      'useActiveSectionContext must be used within an ActiveSectionContextProvider'
+      'useActiveSectionContext must be used within an ActiveSectionContextProvider',
     );
   }
   return context;

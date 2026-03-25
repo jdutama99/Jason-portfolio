@@ -11,29 +11,34 @@ const Navbar = () => {
     useActiveSectionContext();
 
   return (
-    <nav className='backdrop-blur-sm bg-primary/30 h-full flex flex-col items-center py-8 z-50'>
-      <Logo />
-      <div className='flex-1 flex flex-col justify-center'>
-        <div className='flex flex-col gap-5'>
-          {navLinks.map((link) => (
-            <div key={link.title}>
-              <NavLink
-                active={activeSection}
-                setActive={setActiveSection}
-                setTimeOfLastClick={setTimeOfLastClick}
-                link={link}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-      <div className='mt-auto'>
+    <>
+      <div className='md:hidden w-full bg-primary/80 backdrop-blur-sm px-4 py-3 flex items-center justify-between z-50'>
+        <Logo />
         <NavMenu />
-        <div className='mt-8'>
-          <SocialLinks />
-        </div>
       </div>
-    </nav>
+      <nav className='hidden md:flex backdrop-blur-sm bg-primary/30 h-full flex-col items-center py-8 z-50'>
+        <Logo />
+        <div className='flex-1 flex flex-col justify-center'>
+          <div className='flex flex-col gap-5'>
+            {navLinks.map((link) => (
+              <div key={link.title}>
+                <NavLink
+                  active={activeSection}
+                  setActive={setActiveSection}
+                  setTimeOfLastClick={setTimeOfLastClick}
+                  link={link}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className='mt-auto'>
+          <div className='mt-8'>
+            <SocialLinks />
+          </div>
+        </div>
+      </nav>
+    </>
   );
 };
 

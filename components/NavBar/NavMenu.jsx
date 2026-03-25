@@ -41,9 +41,9 @@ export default function NavMenu() {
   };
 
   return (
-    <div className='md:hidden'>
+    <div className='md:hidden relative z-50'>
       <button
-        className='relative mr-4 z-50'
+        className='relative z-50'
         onClick={() => setOpen((prev) => !prev)}
       >
         {!open ? (
@@ -57,7 +57,7 @@ export default function NavMenu() {
           variants={listVariants}
           initial='closed'
           animate='open'
-          className='absolute bottom-0 left-0 w-screen h-20 bg-darkBlue text-secondary flex flex-row items-center justify-center gap-8 text-2xl z-100'
+          className='fixed top-0 left-0 w-screen h-screen bg-darkBlue/95 text-secondary flex flex-col items-center justify-center gap-8 text-2xl z-40'
         >
           {navLinks.map((link) => (
             <motion.li
@@ -66,20 +66,23 @@ export default function NavMenu() {
               whileTap={{ scale: 0.95 }}
               key={link.title}
             >
-              <Link href={link.url} onClick={(e) => {
-                e.preventDefault();
-                const targetId = link.url.replace('#', '');
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                  targetElement.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                  });
-                }
-                setActiveSection(link.title);
-                setTimeOfLastClick(Date.now());
-                setOpen((prev) => !prev);
-              }}>
+              <Link
+                href={link.url}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const targetId = link.url.replace('#', '');
+                  const targetElement = document.getElementById(targetId);
+                  if (targetElement) {
+                    targetElement.scrollIntoView({
+                      behavior: 'smooth',
+                      block: 'start',
+                    });
+                  }
+                  setActiveSection(link.title);
+                  setTimeOfLastClick(Date.now());
+                  setOpen((prev) => !prev);
+                }}
+              >
                 {link.title}
               </Link>
             </motion.li>

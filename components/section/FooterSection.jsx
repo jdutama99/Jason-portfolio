@@ -17,11 +17,6 @@ function FooterSection() {
               </h2>
               <ul className='font-medium'>
                 <li className='mb-4'>
-                  <a href='#top' className='hover:underline'>
-                    Home
-                  </a>
-                </li>
-                <li>
                   <a href='#about' className='hover:underline'>
                     About
                   </a>
