@@ -4,8 +4,11 @@ import { XMarkIcon } from '@heroicons/react/24/outline';
 import navLinks from '../../lib/data/links';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useActiveSectionContext } from '@/context/active-section-context';
+
 export default function NavMenu() {
   const [open, setOpen] = useState(false);
+  const { setActiveSection, setTimeOfLastClick } = useActiveSectionContext();
 
   const listVariants = {
     closed: {
@@ -63,7 +66,20 @@ export default function NavMenu() {
               whileTap={{ scale: 0.95 }}
               key={link.title}
             >
-              <Link href={link.url} onClick={() => setOpen((prev) => !prev)}>
+              <Link href={link.url} onClick={(e) => {
+                e.preventDefault();
+                const targetId = link.url.replace('#', '');
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                  targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start',
+                  });
+                }
+                setActiveSection(link.title);
+                setTimeOfLastClick(Date.now());
+                setOpen((prev) => !prev);
+              }}>
                 {link.title}
               </Link>
             </motion.li>

@@ -18,8 +18,18 @@ const NavLink = ({ active, link, setActive, setTimeOfLastClick }) => {
           }
         )}
         href={link.url}
-        onClick={() => {
-          setActive(link.title), setTimeOfLastClick(Date.now());
+        onClick={(e) => {
+          e.preventDefault();
+          const targetId = link.url.replace('#', '');
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start',
+            });
+          }
+          setActive(link.title);
+          setTimeOfLastClick(Date.now());
         }}
       >
         {link.title}
