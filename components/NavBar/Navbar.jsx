@@ -3,6 +3,7 @@ import navLinks from '../../lib/data/links';
 import Logo from './Logo';
 import NavLink from './NavLink';
 import NavMenu from './NavMenu';
+import SocialLinks from './SocialLinks';
 import { useActiveSectionContext } from '@/context/active-section-context';
 
 const Navbar = () => {
@@ -28,6 +29,9 @@ const Navbar = () => {
       </div>
       <div className='mt-auto'>
         <NavMenu />
+        <div className='mt-8'>
+          <SocialLinks />
+        </div>
       </div>
     </nav>
   );
