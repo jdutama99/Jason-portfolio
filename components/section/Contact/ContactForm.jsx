@@ -1,5 +1,4 @@
 'use client';
-import { sendEmail } from '@/lib/actions/sendEmail';
 import SubmitBtn from '@/components/common/SubmitBtn';
 import { useForm } from 'react-hook-form';
 import toast from 'react-hot-toast';
@@ -45,14 +44,11 @@ const ContactForm = () => {
   }
 
   return (
-    <div className='border border-purple rounded-xl '>
-      <form
-        className='w-full p-8 my-4 md:px-12 mr-auto'
-        onSubmit={handleSubmit(onSubmit)}
-      >
-        <div className='flex flex-col gap-4 mt-5 mb-5'>
+    <div className='rounded-lg'>
+      <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
+        <div className='flex flex-col gap-4'>
           <input
-            className='w-full rounded-lg text-gray-900 mt-2 p-3 focus:outline-purple focus:ring-0'
+            className='w-full rounded-lg bg-card/50 text-secondary border border-dim/30 p-3 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent placeholder:text-dim'
             type='email'
             max={200}
             placeholder='example@youremail.com'
@@ -61,7 +57,7 @@ const ContactForm = () => {
             required
           />
           <input
-            className='w-full rounded-lg text-gray-900 mt-2 p-3 focus:outline-purple focus:ring-0'
+            className='w-full rounded-lg bg-card/50 text-secondary border border-dim/30 p-3 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent placeholder:text-dim'
             type='text'
             placeholder='Subject'
             name='subject'
@@ -71,7 +67,7 @@ const ContactForm = () => {
           />
           <textarea
             placeholder='Message'
-            className='w-full rounded-lg text-gray-900 mt-2 p-3 focus:outline-purple focus:ring-0'
+            className='w-full rounded-lg bg-card/50 text-secondary border border-dim/30 p-3 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent placeholder:text-dim'
             name='message'
             {...register('message')}
             rows={4}
@@ -80,7 +76,7 @@ const ContactForm = () => {
           />
         </div>
 
-        <div className='flex flex-start my-2 text-secondary'>
+        <div className='flex mt-4'>
           <SubmitBtn pending={isSubmitting} />
         </div>
       </form>

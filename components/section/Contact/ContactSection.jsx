@@ -1,58 +1,44 @@
 'use client';
 import ContactForm from './ContactForm';
-import Discord from '@/public/Discord.svg';
-import LinkedIn from '@/public/linkedin.svg';
-import Image from 'next/image';
 import useSectionInView from '@/lib/hooks/useSectionInView';
-
 import { motion } from 'framer-motion';
-import ButtonLink from '@/components/common/ButtonLink';
+import SectionHeading from '@/components/common/SectionHeading';
 
 const ContactSection = () => {
   const { ref } = useSectionInView('Contact');
   return (
-    <section id='contact' ref={ref} className=' scroll-mt-20'>
-      <div className='bg-darkBlue p-6 md:p-24 flex justify-center '>
-        <motion.div
-          className='text-center text-secondary max-w-2xl'
-          initial={{
-            opacity: 0,
-          }}
-          whileInView={{
-            opacity: 1,
-          }}
-          transition={{ duration: 2 }}
-          viewport={{ once: true }}
-        >
-          <h1 className='text-4xl'>Contact</h1>
-          <h2 className='text-base mb-10'>
-            Let&apos;s connect and explore the possibilities together!
-          </h2>
-          <ContactForm />
-          <div className='mt-10'>
-            <h1 className='text-2xl'>Reach me directly</h1>
-            <p className='text-base mb-6 text-balance'>
-              For direct inquiries and collaborations, please feel free to call
-              or email me. I&apos;m eager to connect and discuss potential
-              opportunities.
-            </p>
-            <div className='grid grid-cols-1 md:grid-cols-2 mt-10 gap-4 md:gap-6 mb-10'>
-              <div className='col-span-1'>
-                <ButtonLink link='https://discord.com/invite/DkSpGSeD'>
-                  <Image src={Discord} width={25} alt='LinkedIn' />
-                  Discord
-                </ButtonLink>
-              </div>
-              <div className='col-span-1'>
-                <ButtonLink link='https://www.linkedin.com/in/jason-utama/'>
-                  <Image src={LinkedIn} width={25} alt='LinkedIn' />
-                  LinkedIn
-                </ButtonLink>
-              </div>
-            </div>
-          </div>
-        </motion.div>
-      </div>
+    <section id='contact' ref={ref} className='scroll-mt-24 mb-16 lg:mb-36'>
+      <SectionHeading>Contact</SectionHeading>
+      <motion.div
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+      >
+        <p className='text-muted leading-relaxed mb-8'>
+          Let&apos;s connect and explore the possibilities together! Feel free
+          to reach out via the form below, or contact me directly on{' '}
+          <a
+            href='https://www.linkedin.com/in/jason-utama/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-secondary hover:text-accent transition-colors font-medium underline decoration-accent/40 underline-offset-4'
+          >
+            LinkedIn
+          </a>{' '}
+          or{' '}
+          <a
+            href='https://discord.com/invite/DkSpGSeD'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-secondary hover:text-accent transition-colors font-medium underline decoration-accent/40 underline-offset-4'
+          >
+            Discord
+          </a>
+          .
+        </p>
+        <ContactForm />
+      </motion.div>
     </section>
   );
 };

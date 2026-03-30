@@ -47,9 +47,9 @@ export default function NavMenu() {
         onClick={() => setOpen((prev) => !prev)}
       >
         {!open ? (
-          <Bars3Icon className='h-10 w-10 text-secondary' />
+          <Bars3Icon className='h-8 w-8 text-secondary' />
         ) : (
-          <XMarkIcon className='h-10 w-10 text-secondary' />
+          <XMarkIcon className='h-8 w-8 text-secondary' />
         )}
       </button>
       {open && (
@@ -57,17 +57,18 @@ export default function NavMenu() {
           variants={listVariants}
           initial='closed'
           animate='open'
-          className='fixed top-0 left-0 w-screen h-screen bg-darkBlue/95 text-secondary flex flex-col items-center justify-center gap-8 text-2xl z-40'
+          className='fixed top-0 left-0 w-screen h-screen bg-primary/95 backdrop-blur-md text-secondary flex flex-col items-center justify-center gap-8 text-lg font-medium uppercase tracking-widest z-40'
         >
           {navLinks.map((link) => (
             <motion.li
               variants={itemVariants}
-              whileHover={{ scale: 1.1 }}
+              whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               key={link.title}
             >
               <Link
                 href={link.url}
+                className='hover:text-accent transition-colors'
                 onClick={(e) => {
                   e.preventDefault();
                   const targetId = link.url.replace('#', '');

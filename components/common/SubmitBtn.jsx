@@ -7,7 +7,7 @@ export default function SubmitBtn({ pending }) {
   return (
     <button
       type='submit'
-      className='inline-flex items-center justify-center p-4 mb-2 me-4 rounded-lg children-secondary border border-purple hover:bg-purple'
+      className='inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-medium text-secondary bg-accent hover:bg-deep transition-colors'
       disabled={pending}
     >
       {pending ? (

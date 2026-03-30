@@ -1,48 +1,37 @@
 'use client';
-import SectionHeading from '../common/SectionHeading';
 import Skills from '../../lib/data/skills';
 import { motion } from 'framer-motion';
 
 export default function SkillSection() {
   const fadeInAnimationVariants = {
-    initial: {
-      opacity: 0,
-      y: 100,
-    },
+    initial: { opacity: 0, y: 20 },
     animate: (index) => ({
       opacity: 1,
       y: 0,
-      transition: {
-        delay: 0.05 * index,
-      },
+      transition: { delay: 0.03 * index },
     }),
   };
 
   return (
-    <section
-      id='skill'
-      className='px-4 py-16 sm:px-8 md:px-12 lg:px-20 xl:px-40 scroll-mt-20'
-    >
-      <div className='text-center place-self-center'>
-        <SectionHeading>My Skills</SectionHeading>
-        <ul className='flex flex-wrap justify-center text-center gap-2 p-8'>
-          {Skills.map((skill, index) => (
-            <motion.li
-              key={index}
-              className='bg-transparent text-secondary border border-purple p-2 rounded-lg'
-              variants={fadeInAnimationVariants}
-              initial='initial'
-              whileInView='animate'
-              viewport={{
-                once: true,
-              }}
-              custom={index}
-            >
-              {skill}
-            </motion.li>
-          ))}
-        </ul>
-      </div>
+    <section id='skill' className='mb-16 lg:mb-36 scroll-mt-24'>
+      <h2 className='text-sm font-bold uppercase tracking-widest text-secondary mb-10 sticky top-0 z-20 -mx-6 px-6 py-5 backdrop-blur-sm bg-primary/75 lg:sr-only'>
+        Skills
+      </h2>
+      <ul className='flex flex-wrap gap-2'>
+        {Skills.map((skill, index) => (
+          <motion.li
+            key={index}
+            className='rounded-full bg-accent/10 px-3 py-1 text-xs font-medium leading-5 text-accent'
+            variants={fadeInAnimationVariants}
+            initial='initial'
+            whileInView='animate'
+            viewport={{ once: true }}
+            custom={index}
+          >
+            {skill}
+          </motion.li>
+        ))}
+      </ul>
     </section>
   );
 }

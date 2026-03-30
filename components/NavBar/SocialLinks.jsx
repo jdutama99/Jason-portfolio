@@ -11,7 +11,7 @@ const iconMap = {
 
 export default function SocialLinks() {
   return (
-    <div className='flex gap-4 justify-center items-center'>
+    <div className='flex gap-5 items-center'>
       {socialLinks.map((link) => {
         const IconComponent = iconMap[link.icon];
         return (
@@ -20,11 +20,11 @@ export default function SocialLinks() {
             href={link.url}
             target='_blank'
             rel='noopener noreferrer'
-            className='text-secondary hover:text-accent transition-colors duration-200'
+            className='text-muted hover:text-secondary transition-colors duration-200'
             aria-label={link.name}
           >
             {IconComponent ? (
-              <IconComponent className='h-6 w-6' />
+              <IconComponent className='h-5 w-5' />
             ) : (
               <span>{link.name}</span>
             )}
