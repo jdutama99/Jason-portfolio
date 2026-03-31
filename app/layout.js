@@ -3,6 +3,7 @@ import './globals.css';
 import Navbar from '@/components/NavBar/Navbar';
 import FooterSection from '@/components/section/FooterSection';
 import { ActiveSectionContextProvider } from '@/context/active-section-context';
+import { ThemeContextProvider } from '@/context/theme-context';
 import { Toaster } from 'react-hot-toast';
 import Spotlight from '@/components/common/Spotlight';
 
@@ -18,7 +19,8 @@ export default function RootLayout({ children }) {
     <html className='scroll-smooth' lang='en'>
       <body className={inter.className}>
         <div className='bg-primary relative min-h-screen'>
-          <ActiveSectionContextProvider>
+          <ThemeContextProvider>
+            <ActiveSectionContextProvider>
             <Spotlight />
             <div className='mx-auto max-w-screen-xl lg:flex'>
               {/* Left sticky panel */}
@@ -33,6 +35,7 @@ export default function RootLayout({ children }) {
             </div>
             <Toaster position='bottom-right' />
           </ActiveSectionContextProvider>
+          </ThemeContextProvider>
         </div>
       </body>
     </html>

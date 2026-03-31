@@ -4,10 +4,13 @@ import NavLink from './NavLink';
 import NavMenu from './NavMenu';
 import SocialLinks from './SocialLinks';
 import { useActiveSectionContext } from '@/context/active-section-context';
+import { useThemeContext } from '@/context/theme-context';
+import { SunIcon, MoonIcon } from '@heroicons/react/24/outline';
 
 const Navbar = () => {
   const { activeSection, setActiveSection, setTimeOfLastClick } =
     useActiveSectionContext();
+  const { theme, toggleTheme } = useThemeContext();
 
   return (
     <>
@@ -16,7 +19,20 @@ const Navbar = () => {
         <a href='#' className='text-secondary font-bold text-lg'>
           Jason Utama
         </a>
-        <NavMenu />
+        <div className='flex items-center gap-3'>
+          <button
+            onClick={toggleTheme}
+            className='p-2 rounded-full border border-dim/40 text-secondary hover:border-secondary transition-all duration-200'
+            aria-label='Toggle theme'
+          >
+            {theme === 'dark' ? (
+              <SunIcon className='h-5 w-5' />
+            ) : (
+              <MoonIcon className='h-5 w-5' />
+            )}
+          </button>
+          <NavMenu />
+        </div>
       </div>
 
       {/* Desktop left panel */}
@@ -47,8 +63,19 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className='mt-8'>
+        <div className='mt-8 flex items-center gap-5'>
           <SocialLinks />
+          <button
+            onClick={toggleTheme}
+            className='p-2 rounded-full border border-dim/40 text-muted hover:text-secondary hover:border-secondary transition-all duration-200'
+            aria-label='Toggle theme'
+          >
+            {theme === 'dark' ? (
+              <SunIcon className='h-5 w-5' />
+            ) : (
+              <MoonIcon className='h-5 w-5' />
+            )}
+          </button>
         </div>
       </nav>
     </>
