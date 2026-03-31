@@ -27,7 +27,7 @@
   @apply rounded-lg p-6 transition-all duration-300;
 }
 .experience-card:hover {
-  @apply bg-card/50 shadow-[inset_0_1px_0_0_rgba(102,155,188,0.15)] drop-shadow-lg;
+  @apply bg-card/50 shadow-[inset_0_1px_0_0_rgba(255,255,255,0.06)] drop-shadow-lg;
 }
 
 .animated-background {

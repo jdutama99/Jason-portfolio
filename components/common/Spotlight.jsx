@@ -16,7 +16,7 @@ export default function Spotlight() {
     <div
       className='spotlight hidden md:block'
       style={{
-        background: `radial-gradient(600px at ${position.x}px ${position.y}px, rgba(102, 155, 188, 0.12), transparent 80%)`,
+        background: `radial-gradient(600px at ${position.x}px ${position.y}px, rgba(255, 255, 255, 0.04), transparent 80%)`,
       }}
     />
   );
