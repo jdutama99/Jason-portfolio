@@ -21,14 +21,16 @@ const Navbar = () => {
         </a>
         <div className='flex items-center gap-3'>
           <button
+            type='button'
             onClick={toggleTheme}
             className='p-2 rounded-full border border-dim/40 text-secondary hover:border-secondary transition-all duration-200'
             aria-label='Toggle theme'
+            aria-pressed={theme === 'dark'}
           >
             {theme === 'dark' ? (
-              <SunIcon className='h-5 w-5' />
+              <SunIcon className='h-5 w-5' aria-hidden='true' />
             ) : (
-              <MoonIcon className='h-5 w-5' />
+              <MoonIcon className='h-5 w-5' aria-hidden='true' />
             )}
           </button>
           <NavMenu />
@@ -36,7 +38,7 @@ const Navbar = () => {
       </div>
 
       {/* Desktop left panel */}
-      <nav className='hidden md:flex h-full flex-col justify-between px-12 lg:px-16 py-20'>
+      <nav className='hidden md:flex h-full flex-col justify-between px-12 lg:px-16 py-20' aria-label='Primary'>
         <div>
           <a href='#'>
             <h1 className='text-4xl lg:text-5xl font-bold text-secondary tracking-tight'>
@@ -66,14 +68,16 @@ const Navbar = () => {
         <div className='mt-8 flex items-center gap-5'>
           <SocialLinks />
           <button
+            type='button'
             onClick={toggleTheme}
             className='p-2 rounded-full border border-dim/40 text-muted hover:text-secondary hover:border-secondary transition-all duration-200'
             aria-label='Toggle theme'
+            aria-pressed={theme === 'dark'}
           >
             {theme === 'dark' ? (
-              <SunIcon className='h-5 w-5' />
+              <SunIcon className='h-5 w-5' aria-hidden='true' />
             ) : (
-              <MoonIcon className='h-5 w-5' />
+              <MoonIcon className='h-5 w-5' aria-hidden='true' />
             )}
           </button>
         </div>

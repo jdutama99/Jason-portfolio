@@ -8,6 +8,7 @@ const NavLink = ({ active, link, setActive, setTimeOfLastClick }) => {
     <Link
       className='group flex items-center py-2'
       href={link.url}
+      aria-current={isActive ? 'location' : undefined}
       onClick={(e) => {
         e.preventDefault();
         const targetId = link.url.replace('#', '');

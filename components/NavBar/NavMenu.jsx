@@ -44,19 +44,25 @@ export default function NavMenu() {
     <div className='md:hidden relative z-50'>
       <button
         className='relative z-50'
+        type='button'
         onClick={() => setOpen((prev) => !prev)}
+        aria-label={open ? 'Close menu' : 'Open menu'}
+        aria-expanded={open}
+        aria-controls='mobile-navigation'
       >
         {!open ? (
-          <Bars3Icon className='h-8 w-8 text-secondary' />
+          <Bars3Icon className='h-8 w-8 text-secondary' aria-hidden='true' />
         ) : (
-          <XMarkIcon className='h-8 w-8 text-secondary' />
+          <XMarkIcon className='h-8 w-8 text-secondary' aria-hidden='true' />
         )}
       </button>
       {open && (
         <motion.ul
+          id='mobile-navigation'
           variants={listVariants}
           initial='closed'
           animate='open'
+          aria-label='Mobile navigation'
           className='fixed top-0 left-0 w-screen h-screen bg-primary/95 backdrop-blur-md text-secondary flex flex-col items-center justify-center gap-8 text-lg font-medium uppercase tracking-widest z-40'
         >
           {navLinks.map((link) => (

@@ -11,7 +11,7 @@ const iconMap = {
 
 export default function SocialLinks() {
   return (
-    <div className='flex gap-5 items-center'>
+    <nav className='flex gap-5 items-center' aria-label='Social links'>
       {socialLinks.map((link) => {
         const IconComponent = iconMap[link.icon];
         return (
@@ -21,16 +21,16 @@ export default function SocialLinks() {
             target='_blank'
             rel='noopener noreferrer'
             className='text-muted hover:text-secondary transition-colors duration-200'
-            aria-label={link.name}
+            aria-label={`${link.name} (opens in a new tab)`}
           >
             {IconComponent ? (
-              <IconComponent className='h-5 w-5' />
+              <IconComponent className='h-5 w-5' aria-hidden='true' />
             ) : (
               <span>{link.name}</span>
             )}
           </Link>
         );
       })}
-    </div>
+    </nav>
   );
 }

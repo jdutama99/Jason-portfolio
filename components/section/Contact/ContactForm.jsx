@@ -47,31 +47,46 @@ const ContactForm = () => {
     <div className='rounded-lg'>
       <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
         <div className='flex flex-col gap-4'>
+          <label htmlFor='contact-email' className='sr-only'>
+            Email address
+          </label>
           <input
+            id='contact-email'
             className='w-full rounded-lg bg-card/50 text-secondary border border-dim/30 p-3 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent placeholder:text-dim'
             type='email'
             max={200}
             placeholder='example@youremail.com'
             name='email'
             {...register('email')}
+            autoComplete='email'
             required
           />
+          <label htmlFor='contact-subject' className='sr-only'>
+            Subject
+          </label>
           <input
+            id='contact-subject'
             className='w-full rounded-lg bg-card/50 text-secondary border border-dim/30 p-3 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent placeholder:text-dim'
             type='text'
             placeholder='Subject'
             name='subject'
             {...register('subject')}
             max={200}
+            autoComplete='off'
             required
           />
+          <label htmlFor='contact-message' className='sr-only'>
+            Message
+          </label>
           <textarea
+            id='contact-message'
             placeholder='Message'
             className='w-full rounded-lg bg-card/50 text-secondary border border-dim/30 p-3 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent placeholder:text-dim'
             name='message'
             {...register('message')}
             rows={4}
             max={2000}
+            autoComplete='off'
             required
           />
         </div>

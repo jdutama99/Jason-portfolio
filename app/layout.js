@@ -18,17 +18,26 @@ export default function RootLayout({ children }) {
   return (
     <html className='scroll-smooth' lang='en'>
       <body className={inter.className}>
+        <a
+          href='#main-content'
+          className='skip-link sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-secondary focus:px-4 focus:py-2 focus:text-primary'
+        >
+          Skip to main content
+        </a>
         <div className='bg-primary relative min-h-screen'>
           <ThemeContextProvider>
             <ActiveSectionContextProvider>
             <Spotlight />
             <div className='mx-auto max-w-screen-xl lg:flex'>
               {/* Left sticky panel */}
-              <header className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between'>
+              <header
+                className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between'
+                aria-label='Site header'
+              >
                 <Navbar />
               </header>
               {/* Right scrollable content */}
-              <main className='lg:w-1/2 px-6 md:px-12 lg:px-6 lg:py-20'>
+              <main id='main-content' className='lg:w-1/2 px-6 md:px-12 lg:px-6 lg:py-20'>
                 {children}
                 <FooterSection />
               </main>

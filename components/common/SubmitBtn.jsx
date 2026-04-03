@@ -9,9 +9,16 @@ export default function SubmitBtn({ pending }) {
       type='submit'
       className='inline-flex items-center justify-center px-6 py-3 rounded-lg text-sm font-medium text-primary bg-accent hover:bg-deep transition-colors'
       disabled={pending}
+      aria-busy={pending}
     >
       {pending ? (
-        <div className='h-5 w-5 animate-spin rounded-full border-b-2 border-primary'></div>
+        <>
+          <div
+            className='h-5 w-5 animate-spin rounded-full border-b-2 border-primary'
+            aria-hidden='true'
+          ></div>
+          <span className='sr-only'>Submitting form</span>
+        </>
       ) : (
         <>Submit</>
       )}
