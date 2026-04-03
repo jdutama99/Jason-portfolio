@@ -78,6 +78,26 @@
   }
 }
 
+@media (forced-colors: active) {
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid ButtonText;
+    outline-offset: 2px;
+  }
+
+  .experience-card {
+    border: 1px solid ButtonBorder;
+  }
+
+  .skip-link:focus {
+    background: Canvas;
+    color: CanvasText;
+    border: 1px solid ButtonBorder;
+  }
+}
+
 .animated-background {
   background: linear-gradient(315deg, #2b4162 0%, #12100e 74%);
   background-size: 300% 300%;

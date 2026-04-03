@@ -27,23 +27,27 @@ export default function RootLayout({ children }) {
         <div className='bg-primary relative min-h-screen'>
           <ThemeContextProvider>
             <ActiveSectionContextProvider>
-            <Spotlight />
-            <div className='mx-auto max-w-screen-xl lg:flex'>
-              {/* Left sticky panel */}
-              <header
-                className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between'
-                aria-label='Site header'
-              >
-                <Navbar />
-              </header>
-              {/* Right scrollable content */}
-              <main id='main-content' className='lg:w-1/2 px-6 md:px-12 lg:px-6 lg:py-20'>
-                {children}
-                <FooterSection />
-              </main>
-            </div>
-            <Toaster position='bottom-right' />
-          </ActiveSectionContextProvider>
+              <Spotlight />
+              <div className='mx-auto max-w-screen-xl lg:flex'>
+                {/* Left sticky panel */}
+                <header
+                  className='lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between'
+                  aria-label='Site header'
+                >
+                  <Navbar />
+                </header>
+                {/* Right scrollable content */}
+                <main
+                  id='main-content'
+                  tabIndex='-1'
+                  className='lg:w-1/2 px-6 md:px-12 lg:px-6 lg:py-20'
+                >
+                  {children}
+                  <FooterSection />
+                </main>
+              </div>
+              <Toaster position='bottom-right' />
+            </ActiveSectionContextProvider>
           </ThemeContextProvider>
         </div>
       </body>

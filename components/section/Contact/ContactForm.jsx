@@ -7,7 +7,7 @@ const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { isSubmitting },
+    formState: { isSubmitting, errors },
     reset,
   } = useForm();
 
@@ -47,8 +47,11 @@ const ContactForm = () => {
     <div className='rounded-lg'>
       <form className='w-full' onSubmit={handleSubmit(onSubmit)}>
         <div className='flex flex-col gap-4'>
-          <label htmlFor='contact-email' className='sr-only'>
-            Email address
+          <label
+            htmlFor='contact-email'
+            className='text-sm font-medium text-secondary'
+          >
+            Email address <span aria-hidden='true'>*</span>
           </label>
           <input
             id='contact-email'
@@ -57,12 +60,30 @@ const ContactForm = () => {
             max={200}
             placeholder='example@youremail.com'
             name='email'
-            {...register('email')}
+            {...register('email', {
+              required: 'Email address is required.',
+              maxLength: {
+                value: 200,
+                message: 'Email must be 200 characters or fewer.',
+              },
+            })}
             autoComplete='email'
+            aria-required='true'
+            aria-invalid={errors.email ? 'true' : 'false'}
+            aria-describedby={errors.email ? 'contact-email-error' : undefined}
             required
           />
-          <label htmlFor='contact-subject' className='sr-only'>
-            Subject
+          {errors.email && (
+            <p id='contact-email-error' className='text-sm text-secondary'>
+              {errors.email.message}
+            </p>
+          )}
+
+          <label
+            htmlFor='contact-subject'
+            className='text-sm font-medium text-secondary'
+          >
+            Subject <span aria-hidden='true'>*</span>
           </label>
           <input
             id='contact-subject'
@@ -70,25 +91,61 @@ const ContactForm = () => {
             type='text'
             placeholder='Subject'
             name='subject'
-            {...register('subject')}
+            {...register('subject', {
+              required: 'Subject is required.',
+              maxLength: {
+                value: 200,
+                message: 'Subject must be 200 characters or fewer.',
+              },
+            })}
             max={200}
             autoComplete='off'
+            aria-required='true'
+            aria-invalid={errors.subject ? 'true' : 'false'}
+            aria-describedby={
+              errors.subject ? 'contact-subject-error' : undefined
+            }
             required
           />
-          <label htmlFor='contact-message' className='sr-only'>
-            Message
+          {errors.subject && (
+            <p id='contact-subject-error' className='text-sm text-secondary'>
+              {errors.subject.message}
+            </p>
+          )}
+
+          <label
+            htmlFor='contact-message'
+            className='text-sm font-medium text-secondary'
+          >
+            Message <span aria-hidden='true'>*</span>
           </label>
           <textarea
             id='contact-message'
             placeholder='Message'
             className='w-full rounded-lg bg-card/50 text-secondary border border-dim/30 p-3 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent placeholder:text-dim'
             name='message'
-            {...register('message')}
+            {...register('message', {
+              required: 'Message is required.',
+              maxLength: {
+                value: 2000,
+                message: 'Message must be 2000 characters or fewer.',
+              },
+            })}
             rows={4}
             max={2000}
             autoComplete='off'
+            aria-required='true'
+            aria-invalid={errors.message ? 'true' : 'false'}
+            aria-describedby={
+              errors.message ? 'contact-message-error' : undefined
+            }
             required
           />
+          {errors.message && (
+            <p id='contact-message-error' className='text-sm text-secondary'>
+              {errors.message.message}
+            </p>
+          )}
         </div>
 
         <div className='flex mt-4'>

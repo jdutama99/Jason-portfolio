@@ -6,6 +6,7 @@ import SkillSection from '@/components/section/SkillSection';
 export default function Home() {
   return (
     <>
+      <h1 className='sr-only'>Jason Utama portfolio website</h1>
       <AboutSection />
       <ExperienceSection />
       <SkillSection />
