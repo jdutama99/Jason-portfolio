@@ -17,35 +17,34 @@ const AboutSection = () => {
       >
         <div className='text-muted leading-relaxed space-y-4'>
           <p>
-            Hey, welcome to my corner of the internet! I&apos;m a{' '}
+            Hey, welcome to my corner of the internet. I’m a{' '}
             <span className='text-secondary'>Frontend Engineer</span> based in{' '}
-            <span className='text-secondary'>Atlanta, GA</span> — and honestly,
-            I&apos;ve been building for the web since before it was cool.
+            <span className='text-secondary'>Atlanta, GA</span> and I’ve been
+            building for the web for a long time now.
           </p>
+
           <p>
-            It all started in middle school when a class project handed me{' '}
-            <span className='text-secondary'>HTML and CSS</span> and basically
-            dared me to make something. I never looked back. What started as a
-            curiosity quickly became an obsession, and that rabbit hole?
-            I&apos;m still happily tumbling down it.
+            It started back in middle school when a class project introduced me
+            to <span className='text-secondary'>HTML and CSS</span> and told me
+            to build something. I got hooked pretty quickly and what started as
+            curiosity turned into something I kept coming back to.
           </p>
+
           <p>
-            These days, I channel that same energy into crafting polished,
-            high-performance web experiences — working with{' '}
-            <span className='text-secondary'>ReactJS</span> and{' '}
-            <span className='text-secondary'>Next.js</span> to help teams ship
-            faster, modernize legacy codebases, and build UIs that people
-            actually enjoy using. I&apos;ve had the privilege of doing this at
-            scale for{' '}
-            <span className='text-secondary'>Fortune 500 companies</span>, and
-            every project still gets me just as excited as that first HTML page
-            did.
+            These days I focus on building clean, high performance web
+            experiences using <span className='text-secondary'>ReactJS</span>{' '}
+            and <span className='text-secondary'>Next.js</span>. I like helping
+            teams move faster, cleaning up messy codebases, and shipping
+            products that actually feel good to use. I’ve had the chance to do
+            this at scale for{' '}
+            <span className='text-secondary'>Fortune 500 companies</span>, and I
+            still enjoy it just as much as when I started.
           </p>
+
           <p>
-            When I step away from the screen, you&apos;ll find me lacing up for
-            a soccer match, hanging out with my wife and our dog Benny, or
-            getting completely locked in on a gaming session with friends. A
-            good co-op game and good company? Hard to beat.
+            Outside of work, I’m usually playing soccer, spending time with my
+            family and my dog, or jumping into a game with friends. Good co op
+            games and good company are hard to beat.
           </p>
         </div>
       </motion.div>
